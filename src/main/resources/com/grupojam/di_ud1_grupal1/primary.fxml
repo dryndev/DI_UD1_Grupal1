@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grupojam.di_ud1_grupal1.PrimaryController">
+<VBox alignment="CENTER" prefHeight="442.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grupojam.di_ud1_grupal1.PrimaryController">
    <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <TextField fx:id="txt_nombre" onKeyPressed="#onEnter" prefHeight="25.0" prefWidth="154.0" promptText="Nombre" />
+            <Button fx:id="btn_saludar" mnemonicParsing="false" onAction="#saludar" text="Saludar" />
+         </children>
+      </HBox>
+      <Text fx:id="saludo" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Pon tu nombre y pulsa el botón!" textAlignment="CENTER" wrappingWidth="169.13671875" />
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
 </VBox>
